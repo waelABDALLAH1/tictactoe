@@ -7,7 +7,9 @@ class TicTacToe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      olors.blue,
+      title: 'Tic Tac Toe',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
       home: Game(),
     );
