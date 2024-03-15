@@ -102,6 +102,7 @@ class _GameState extends State<Game> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GridView.builder(
+
               shrinkWrap: true,
               gridDelegate:
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
