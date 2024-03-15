@@ -30,7 +30,6 @@ class _GameState extends State<Game> {
     }
   }
 
-
   void checkWinner() {
     // Rows
     for (int i = 0; i < 3; i++) {
@@ -57,18 +56,14 @@ class _GameState extends State<Game> {
     }
 
     // Diagonals
-    if (board[0] != '' &&
-        board[0] == board[4] &&
-        board[4] == board[8]) {
+    if (board[0] != '' && board[0] == board[4] && board[4] == board[8]) {
       setState(() {
         winner = board[0];
       });
       return;
     }
 
-    if (board[2] != '' &&
-        board[2] == board[4] &&
-        board[4] == board[6]) {
+    if (board[2] != '' && board[2] == board[4] && board[4] == board[6]) {
       setState(() {
         winner = board[2];
       });
@@ -83,6 +78,7 @@ class _GameState extends State<Game> {
       return;
     }
   }
+
   void resetGame() {
     setState(() {
       board = List.filled(9, '');
@@ -102,10 +98,9 @@ class _GameState extends State<Game> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GridView.builder(
-
               shrinkWrap: true,
               gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
               itemCount: 9,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
